@@ -1,17 +1,22 @@
 import * as React from 'react';
-import {Badge, Button, Card, Divider, Heading, Sticky, Text} from 'gestalt';
-import {Vertical, VerticalSpacer} from 'gls';
+import {Badge, Button, Card, Divider, Heading, Icon, Sticky, Text} from 'gestalt';
+import {HorizontalSpacer, Vertical, VerticalSpacer} from 'gls';
 
 export class UserOrderPage extends React.Component {
 
     render() {
         return <>
             <div>
-                <Card active>
-                    <Heading size={'sm'}>
-                        My Orders
-                    </Heading>
-                </Card>
+                <div style={{ display: 'flex' }}>
+                    <Icon icon="menu" accessibilityLabel="Menu" color="darkGray"/>
+                    <div style={{ flexGrow: 1, marginLeft: 16 }}>
+                        <Card active>
+                            <Heading size={'sm'}>
+                                My Orders
+                            </Heading>
+                        </Card>
+                    </div>
+                </div>
                 <VerticalSpacer space={6}/>
 
                 <VerticalSpacer/>
